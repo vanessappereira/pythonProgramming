@@ -1,6 +1,7 @@
 # Criação da lista vazia
 numeros = []
 
+
 # Função para adicionar números à lista
 def addNumeros():
     try:
@@ -17,11 +18,8 @@ def listaDeNumeros():
 
 
 while True:
-    print("Lista")
-    print("1 - Adicionar número")
-    print("2 - Listar")
-    print("0. Sair")
-    
+    print("Lista \n" + "1 - Adicionar número \n" + "2 - Listar \n" + "0. Sair \n")
+
     selecao = int(input("Selecione a opção desejada: "))
     if selecao == 1:
         addNumeros()
@@ -32,4 +30,3 @@ while True:
         break
     else:
         print("Opção inválida. Tente novamente.")
-     
