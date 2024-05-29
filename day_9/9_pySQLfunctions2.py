@@ -10,6 +10,7 @@ sql_psswd = os.getenv("MYSQL_PASSWORD")
 sql_db = os.getenv("MYSQL_DB")
 
 
+# Connect to DB
 def connectDB():
     try:
         # Establish a connection to the database
@@ -107,18 +108,61 @@ def listData(cursor):
         print(result)
 
 
+# Filtrar por nome
+def filtrar_por_nome(cursor):
+    name = input("Introduza o nome do utilizador a filtrar: ")
+    cursor.execute("SELECT * FROM utilizadores WHERE nome = %s", (name,))
+    results = cursor.fetchall()
+    if results:
+        for result in results:
+            print(result)
+
+
+# Contagem utilizadores
+def contagem_utilizador(cursor):
+    cursor.execute("SELECT COUNT(*) FROM utilizadores")
+    result = cursor.fetchone()
+    print(f"Existem {result[0]} utilizadores na base de dados\n")
+
+
+# Média de idades
+def media_idades(cursor):
+    cursor.execute("SELECT AVG(idade) FROM utilizadores")
+    result = cursor.fetchone()
+    print(f"A média de idades é de {result[0]:.2f}\n")
+
+
+# Adicionar colunas à tabela
+def add_colunas(cursor):
+    # Request a name for the column
+    col_name = input("Introduza o nome da coluna a adicionar: ")
+    # Request a data type for the column
+    data_type = input(
+        "Introduza o tipo de dados da coluna (e.g.,VARCHAR(255), INT, DATE): "
+    )
+    # Create the column
+    cursor.execute(f"ALTER TABLE utilizadores ADD COLUMN {col_name} {data_type}")
+    print("Coluna adicionada com sucesso!")
+
+
 # Menu
 def menu():
     connect = connectDB()
     if connect.is_connected():
         cursor = connect.cursor()
         while True:
-            print("1 - Criar tabela de dados")
-            print("2 - Adicionar dados na tabela")
-            print("3 - Listar dados da tabela")
-            print("4 - Remover dados da tabela")
-            print("5 - Alterar dados da tabela")
-            print("0 - Sair")
+            print(
+                "1 - Criar tabela de dados \n"
+                + "2 - Adicionar dados na tabela \n"
+                + "3 - Listar dados da tabela \n"
+                + "4 - Remover dados da tabela \n"
+                + "5 - Alterar dados da tabela \n"
+                + "6 - Filtrar por nome \n"
+                + "7 - Contagem de utilizadores \n"
+                + "8 - Média de idades \n"
+                + "9 - Adicionar coluna à tabela \n"
+                + "0 - Sair"
+            )
 
             opcao = input("Escolha uma opção: ")
             if opcao == "1":
@@ -131,6 +175,14 @@ def menu():
                 deleteData(cursor)
             elif opcao == "5":
                 alterar_dados(cursor)
+            elif opcao == "6":
+                filtrar_por_nome(cursor)
+            elif opcao == "7":
+                contagem_utilizador(cursor)
+            elif opcao == "8":
+                media_idades(cursor)
+            elif opcao =="9":
+                add_colunas(cursor)
             elif opcao == "0":
                 print("Programa terminado. Obrigado por usar este programa!")
                 break
