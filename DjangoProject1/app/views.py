@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from .models import Name
-nomes =["cerry","blossom","ababanana", "abc"]
+nomes = ["Bubbles","Blossom","Buttercup", "Mojojojo"]
+cidades = ["Lisboa", "Porto", "Coimbra", "Faro"]
 # Create your views here.
 def response(request):
     names = nomes
-    return render(request, 'name.html', {'names': names})
+    cities = cidades
+    return render(request, 'name.html', {'names': names, 'cities': cities})
