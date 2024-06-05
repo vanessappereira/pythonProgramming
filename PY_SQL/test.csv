@@ -1,0 +1,104 @@
+-- MySQL dump 10.13  Distrib 8.0.37, for Win64 (x86_64)
+--
+-- Host: localhost    Database: pythonsql
+-- ------------------------------------------------------
+-- Server version	8.0.37
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `testefinalmaio`
+--
+
+DROP TABLE IF EXISTS `testefinalmaio`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `testefinalmaio` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) DEFAULT NULL,
+  `Idade` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `testefinalmaio`
+--
+
+LOCK TABLES `testefinalmaio` WRITE;
+/*!40000 ALTER TABLE `testefinalmaio` DISABLE KEYS */;
+/*!40000 ALTER TABLE `testefinalmaio` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) DEFAULT NULL,
+  `Age` int DEFAULT NULL,
+  `City` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `utilizadores`
+--
+
+DROP TABLE IF EXISTS `utilizadores`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `utilizadores` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) DEFAULT NULL,
+  `idade` int DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `Cidade` varchar(255) DEFAULT NULL,
+  `teste` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `utilizadores`
+--
+
+LOCK TABLES `utilizadores` WRITE;
+/*!40000 ALTER TABLE `utilizadores` DISABLE KEYS */;
+INSERT INTO `utilizadores` VALUES (1,'JoÃƒÆ’Ã‚Â£o',25,NULL,NULL,NULL),(2,'Vanessa',30,'maria@vaiporai.com',NULL,NULL),(10,'Maria',30,NULL,NULL,NULL),(11,'Pedro',35,NULL,NULL,NULL),(12,'Ana',40,NULL,NULL,NULL),(13,'JoÃƒÆ’Ã‚Â£o',25,NULL,NULL,NULL),(15,'Pedro',35,NULL,NULL,NULL),(16,'Ana',40,NULL,NULL,NULL),(17,'JoÃƒÆ’Ã‚Â£o',25,NULL,NULL,NULL),(18,'Maria',30,NULL,NULL,NULL),(19,'Pedro',35,NULL,NULL,NULL),(20,'Ana',40,NULL,NULL,NULL),(21,'JoÃƒÆ’Ã‚Â£o',25,NULL,NULL,NULL),(22,'Maria',33,NULL,NULL,NULL),(23,'Pedro',35,NULL,NULL,NULL),(24,'Ana',40,'123@abc.com',NULL,NULL),(26,'asd',21,NULL,NULL,NULL),(27,'Maria',26,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `utilizadores` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-06-03 17:33:02

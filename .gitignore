@@ -1,10 +1,6 @@
 # To ignore
 .env
 
-#Formador
-MYSQL_PYTHON_FUNÇÕES_ÚTEIS.py
-
 # Pastas
-/PY_SQL
 __pycache__
 .vscode
