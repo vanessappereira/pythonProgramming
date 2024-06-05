@@ -436,17 +436,17 @@ def main():
             while True:
                 print(
                     "======================================\n"
-                    + "1 - Create datatable \n"
-                    + "2 - Select datatable \n"
-                    + "3 - List information from datatable \n"
-                    + "4 - Add/Update data to datatable \n"
-                    + "5 - Remove data from the table \n"
-                    + "6 - Add columns to datatable \n"
-                    + "7 - Remove columns from datatable \n"
-                    + "8 - Registry information \n"
-                    + "9 - Backup DB \n"
+                    + " 1 - Create datatable \n"
+                    + " 2 - Select datatable \n"
+                    + " 3 - List information from datatable \n"
+                    + " 4 - Add/Update data to datatable \n"
+                    + " 5 - Remove data from the table \n"
+                    + " 6 - Add columns to datatable \n"
+                    + " 7 - Remove columns from datatable \n"
+                    + " 8 - Registry information \n"
+                    + " 9 - Backup DB \n"
                     + "10 - Restore DB \n"
-                    + "0 - Exit \n"
+                    + " 0 - Exit \n"
                     + "======================================"
                 )
                 option = int(input("Please choose an option: "))

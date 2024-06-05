@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TestDjango</title>
+    <title>{{ message }}</title>
 </head>
 
 <body>
@@ -26,14 +26,16 @@
     <br>
     <h1>City List</h1>
     <ul>
-        {% for name in names %}
-        <li>{{ name }}</li>
+        {% for city in cities %}
+        <li>{{ city }}</li>
 
         {% empty %}
-        <li>No names available.</li>
+        <li>No cities available.</li>
 
         {% endfor %}
     </ul>
+    
+    <em><b>{{ current_year }}</b></em>
 </body>
 
 </html>
