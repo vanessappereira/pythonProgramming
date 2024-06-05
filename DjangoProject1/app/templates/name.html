@@ -13,29 +13,32 @@
             <h3>Admin page</h3>
         </a></p>
 
-    <h1>Names List</h1>
+    <h1>Lists</h1>
+
+    <h2>Names</h2>
     <ul>
-        {% for name in names %}
-        <li>{{ name }}</li>
-
-        {% empty %}
-        <li>No names available.</li>
-
-        {% endfor %}
+        {% if names %}
+            {% for name in names %}
+                <li>{{ name }}</li>
+            {% endfor %}
+        {% else %}
+            <li>No names available.</li>
+        {% endif %}
     </ul>
-    <br>
-    <h1>City List</h1>
+
+    <h2>Cities</h2>
     <ul>
-        {% for city in cities %}
-        <li>{{ city }}</li>
-
-        {% empty %}
-        <li>No cities available.</li>
-
-        {% endfor %}
+        {% if cities %}
+            {% for city in cities %}
+            <li>{{ city }}</li>
+            {% endfor %}
+        {% else %}
+            <li>No cities available.</li>
+        {% endif %}
     </ul>
-    
-    <em><b>{{ current_year }}</b></em>
+
+    <em><b>Current Year: {{ current_year }}</b></em>
+
 </body>
 
 </html>
