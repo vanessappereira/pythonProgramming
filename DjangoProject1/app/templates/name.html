@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TestDjango</title>
 </head>
+
 <body>
     <h1>Hello from the other side!</h1>
+    <p><a href="{% url 'admin:index' %}">
+            <h3>Admin page</h3>
+        </a></p>
 
     <h1>Names List</h1>
-        <ul>
-            {% for name in names %}
-            <li>{{ name }}</li>
-            {% endfor %}
-        </ul>
-        <br>
-        <h1>City List</h1>
-        <ul>
-            {% for name in names %}
-            <li>{{ name }}</li>
-            {% endfor %}
-        </ul>
+    <ul>
+        {% for name in names %}
+        <li>{{ name }}</li>
+
+        {% empty %}
+        <li>No names available.</li>
+
+        {% endfor %}
+    </ul>
+    <br>
+    <h1>City List</h1>
+    <ul>
+        {% for name in names %}
+        <li>{{ name }}</li>
+
+        {% empty %}
+        <li>No names available.</li>
+
+        {% endfor %}
+    </ul>
 </body>
+
 </html>
